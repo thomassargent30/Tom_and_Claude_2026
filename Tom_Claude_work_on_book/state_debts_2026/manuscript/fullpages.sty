@@ -1,0 +1,45 @@
+\typeout{Fullpages style option --- Version of 8/4/89}
+\newdimen\@tempdim
+\newdimen\staplewidth \staplewidth = 0.0in
+\newif\if@stapled \@stapledfalse
+\newcommand\stapled{\if@stapled\else\@stapledtrue
+  \global\staplewidth=0.5in
+  \@tempdim = \textwidth \advance\@tempdim -0.5\staplewidth
+  \resetwidth{\@tempdim}\fi }
+%\newlength{\paperwidth} \setlength{\paperwidth}{8.5in}
+\newcommand\resetwidth[1]{\global\textwidth=#1
+ \global\hsize=\textwidth
+ \setlength{\linewidth}{\textwidth}
+ \@tempdim=\paperwidth
+ \advance\@tempdim by -\textwidth
+ \advance\@tempdim by -\staplewidth
+ \divide\@tempdim by 2
+ \global\oddsidemargin=\@tempdim
+ \global\advance\oddsidemargin by -1.0in
+ \global\advance\oddsidemargin by \staplewidth
+ \global\evensidemargin=\oddsidemargin
+ \if@twoside
+  \global\advance\evensidemargin by -2\staplewidth
+ \fi
+ \global\marginparwidth = \@tempdim
+ \global\advance\marginparwidth by -\marginparsep
+ \global\advance\marginparwidth by -0.5in
+ }
+%\newlength{\paperheight} \setlength{\paperheight}{11in}
+\newcommand\resetheight[1]{\global\textheight=#1
+ \global\vsize=\textheight
+ \global\@colht=\textheight  \global\@colroom=\textheight
+ \@tempdim=\paperheight
+ \advance\@tempdim by -\textheight
+ \advance\@tempdim by -\headheight
+ \advance\@tempdim by -\headsep
+ \divide\@tempdim by 2
+ \global\topmargin = \@tempdim
+ \global\advance\topmargin by -1.0in
+% \global\advance\topmargin by -0.5in
+ \global\advance\topmargin by -\headheight
+ }
+%\newcommand\legalsize{\setlength{\paperheight}{14in}
+%\resetheight{11.65in}}
+\resetwidth{6.4in}
+\resetheight{8.5in}
