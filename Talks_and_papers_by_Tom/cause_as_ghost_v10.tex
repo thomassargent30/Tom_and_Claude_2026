@@ -751,6 +751,56 @@ Koopmans and Marschak emphasized that econometric estimation must be grounded in
 The current enthusiasm for diff-in-diff econometrics would have dismayed the twentieth-century giants who built the intellectual foundations of our field. They had created a modern economics cast in terms of structural, dynamic, multivariate equilibria. I personally recommend continuing to capitalize on their legacy by continuing to develop and estimate models that reflect the complexity of the systems we study, rather than by embracing methods that ignore it.
 
 
+\subsection{Unintended Consequences}
+
+The concept of ``unintended consequences'' is among the oldest in social thought: actions undertaken for one purpose produce effects that were neither foreseen nor desired. It has been invoked by legislators, policymakers, and social commentators for centuries, and Milton Friedman (1992) elevated it to a guiding principle for skepticism about government intervention. But what is the formal status of unintended consequences within modern economic theory? The answer depends entirely on which equilibrium concept one adopts, and the contrast illuminates themes that run throughout this paper.
+
+\subsubsection{No Unintended Consequences in a Rational Expectations Equilibrium}
+
+In a rational expectations equilibrium (REE), a ``communism of beliefs'' prevails: all agents---private citizens and government alike---share a common probability model that coincides with the objective data-generating process \cite{Sargent2008}. Formally, if $f(\cdot \mid \theta)$ is the equilibrium density indexed by structural parameters $\theta$, then every agent's subjective density for endogenous variables equals $f(\cdot \mid \theta)$. No agent is surprised by the consequences of any action, whether taken or not, because the common model correctly describes what would happen under every feasible policy.
+
+This communism of beliefs is what makes the powerful theoretical apparatus of intelligent design work: time inconsistency results, reputation models, optimal taxation, and mechanism design all assume that the government and private agents share a correct model of how the economy responds to any contemplated action. When a government solves a Ramsey problem in an REE, it correctly anticipates the consequences of every policy in its feasible set. There are no unintended consequences because the government's model is correct not only along the equilibrium path but also off it---for policies never chosen and experiments never run.
+
+In the Laplacian language of this paper, the REE is the perfect analogue of Laplace's demon applied to economics. Given the structural primitives (preferences, technologies, information, constraints) and the equilibrium concept, the entire future evolution of the system is determined. Every agent is a local Laplacian demon who sees through the full implications of the structural equations. The ghost of ``cause'' has been exorcised because there is nothing more to explain: the structural equations and initial conditions \emph{are} the explanation, and every consequence is, by construction, intended---or at least correctly foreseen.
+
+\subsubsection{Self-Confirming Equilibrium and Incorrect Off-Path Beliefs}
+
+A self-confirming equilibrium (SCE) weakens the communism of beliefs in a precisely targeted way \cite{Sargent2008}. In an SCE, agents' subjective models match the objective data-generating process for events that occur frequently along the equilibrium path, but they may be wrong about events that are rarely or never observed.
+
+Formally, let the true data-generating mechanism be $f(\mathbf{y}, \mathbf{v} \mid \theta)$ and the government's approximating model be $f(\mathbf{y}, \mathbf{v} \mid \hat{\theta})$. An SCE requires the data-matching condition
+\[
+f\bigl(\mathbf{y}, v(h \mid \hat{\theta}^{\circ}) \mid \hat{\theta}^{\circ}\bigr) = f\bigl(\mathbf{y}, v(h \mid \hat{\theta}^{\circ}) \mid \theta\bigr),
+\]
+where $v(h \mid \hat{\theta}^{\circ})$ is the equilibrium policy chosen under the SCE beliefs $\hat{\theta}^{\circ}$. The two densities agree for events that occur under the equilibrium policy, but it is entirely possible that
+\[
+f(\mathbf{y}, \mathbf{v}' \mid \hat{\theta}^{\circ}) \neq f(\mathbf{y}, \mathbf{v}' \mid \theta)
+\]
+for alternative policies $\mathbf{v}' \neq v(h \mid \hat{\theta}^{\circ})$ that the government has not tried. The government has correct beliefs about what it has experienced but potentially wrong beliefs about what would happen if it did something different.
+
+The gap between SCE and REE is unimportant for a small agent whose actions have negligible effects on the economy. A small agent's incorrect beliefs about off-equilibrium-path events are harmless precisely because the agent is small: even if he experiments, the consequences for the aggregate economy are negligible. But the gap matters enormously for a large agent like a government. When a government solves a Ramsey problem, it contemplates the consequences of policies not taken---off-equilibrium-path experiments---and its incorrect beliefs about those counterfactuals shape its actual policy choice and therefore the equilibrium path itself.
+
+\subsubsection{Where Unintended Consequences Live}
+
+This is where unintended consequences reside. In an SCE, a government that ventures beyond its historical experience---that tries a new policy it has never tried before---may discover that the actual consequences differ from what its model predicted. The model was confirmed by the data generated under the old policy, but it was never tested against the data that the new policy generates. Milton Friedman's ``law of unintended consequences'' is thus a statement about SCE, not REE: it asserts that governments operate with models that are wrong about precisely those counterfactual events that matter most for policy design.
+
+The adaptive learning literature studied in Sargent (2008) provides a microfoundation for SCE. When agents---including government policymakers---learn about their environment using recursive statistical algorithms, the limiting beliefs converge to an SCE, not necessarily to an REE. Convergence to an SCE means that the learning process generates enough data to discipline beliefs about frequently observed events but not enough to correct beliefs about rarely observed counterfactuals. The government's model fits the data it has seen but may be dangerously wrong about the data it would see under alternative policies.
+
+An extended example from Sargent (2008) makes this vivid. Consider a monetary authority that uses a misspecified Phillips curve to set inflation policy. In the SCE, the authority's estimates of the inflation-unemployment trade-off match the data generated under its  equilibrium policy. But the authority misunderstands how its systematic policy choices shift the Phillips curve through their effects on private agents' inflation expectations. If the authority attempts a permanently lower inflation target---a policy it has never sustained before---it discovers consequences (in this case, more favorable than anticipated) that its model did not predict. The self-confirming equilibrium traps the authority at a suboptimal inflation rate  because the data generated along the equilibrium path do not contain enough variation to reveal the true structural relationship. Only when occasional ``escapes''---unlikely but recurrent sequences of shocks---push the system away from the SCE does the authority temporarily discover a version of the natural rate hypothesis and reduce inflation. These escapes are  temporary precisely because the mean dynamics pull beliefs back toward the SCE, producing the observed pattern of recurrent inflations and stabilizations.
+
+\subsubsection{Connecting to the Themes of This Paper}
+
+The REE--SCE contrast  refracts several themes of this paper through a single prism.
+
+\textbf{Laplace and the exorcism of ``cause.''} In an REE, Laplace's program is fully realized: the structural equations and initial conditions explain everything, and no causal narrative is needed. But in an SCE, something like ``cause'' creeps back in---not as metaphysics, but as a gap between what the decision maker's model predicts and what actually happens when a novel action is taken. The unintended consequence is the discrepancy between the predicted and actual effects of an off-equilibrium-path intervention. This discrepancy exists  because the decision maker's Laplacian model of the world, while confirmed by past experience, is incomplete.
+
+\textbf{Hurwicz and the modification domain.} Hurwicz taught us that structural form is defined relative to a class of anticipated modifications. In an REE, the decision maker's model is structural with respect to every conceivable modification---it correctly predicts the consequences of any feasible policy. In an SCE, the model is structural only with respect to modifications that have been tried. The modification domain implicitly assumed by the decision maker extends beyond the modification domain validated by the data. Unintended consequences arise precisely when the decision maker acts as though a wider modification domain were validated than actually is.
+
+\textbf{DAGs and off-path reasoning.} The diff-in-diff and DAG-based causal inference literatures purport to identify ``causal effects'' from local natural experiments. But the effects so identified are, at best, properties of the SCE in which the  experiment occurred. They provide no guarantee about what would happen under a different policy regime---one that changes the equilibrium and thereby changes the data-generating process. The ``unintended consequences'' problem is precisely the problem that these methods cannot address: what happens when the intervention is large enough, or different enough in kind, to move the system off the path along which the local estimates were obtained.
+
+\textbf{The Sims--Sargent debate.} The contrast between REE and SCE also illuminates the Sims--Sargent debate. Sims's position---that the government is an optimal agent whose behavior should not be treated as exogenous---is the position that the world is already in an REE. In that case, there are no unintended consequences and no scope for policy advice. The rational expectations econometrics position---that the government can be modeled as following a suboptimal rule that could be improved---implicitly assumes an SCE: the government's model is confirmed by the data it has seen but wrong about some counterfactuals. The possibility of giving useful policy advice depends on the existence of this SCE--REE gap.
+
+In sum, the concept of ``unintended consequences'' is vacuous within an REE but substantive within an SCE. The difference is not merely terminological. It determines whether policy advice is possible, whether experimentation can be informative, and whether the ``law of unintended consequences'' is a structural feature of the economic world or merely a confession that we are not yet in an REE. For those of us who believe that actual policymakers operate with models that are at best self-confirming---confirmed by the data they have seen but potentially wrong about the data they have not---the law of unintended consequences is a permanent companion, not a transitional inconvenience to be assumed away.
+
 
 \appendix
 
@@ -881,6 +931,9 @@ Hurwicz, L. (1967). On the structural form of interdependent systems. In E.~Nage
 Sargent, T.~J. (1984).
 \newblock Autoregressions, expectations, and advice.
 \newblock \emph{American Economic Review}, 74(2):408--415.
+
+\bibitem{Sargent2008}
+Sargent, T.~J. (2008). Evolution and intelligent design. \emph{American Economic Review}, 98(1), 5--37.
 
 \bibitem{SargentJPE2025}
 Sargent, T.~J. (2025). Macroeconomics after Lucas. \emph{Journal of Political Economy}, 133(11), 3363--3413.
